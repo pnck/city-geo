@@ -68,7 +68,7 @@ func main() {
 }
 
 func query(country, province, city, area string) (latitude, longitude string) {
-	api := "http://api.map.baidu.com/geocoding/v3/?address=" + province + city + area + "&output=json&ak=" + baiduAK
+	api := "http://api.map.baidu.com/geocoding/v3/?ret_coordtype=gcj02ll&address=" + province + city + area + "&output=json&ak=" + baiduAK
 	response, data, errors := gorequest.New().Get(api).EndBytes()
 	if nil != errors {
 		log.Printf("city [%s] result failed [%+v]", city, errors)
