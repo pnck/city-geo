@@ -61,7 +61,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	if err := ioutil.WriteFile("data.json", resultData, 0644); nil != err {
+	if err := ioutil.WriteFile("data/data.json", resultData, 0644); nil != err {
 		log.Fatal(err)
 	}
 	log.Println("completed")
